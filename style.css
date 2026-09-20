@@ -1,0 +1,112 @@
+:root {
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey-700: hsl(0, 0%, 20%);
+    --Grey-800: hsl(0, 0%, 12%);
+    --Grey-900: hsl(0, 0%, 8%);
+    --font-size: 14px;
+}
+
+/* Universal Box Sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Grey-900);
+    font-family: 'Inter', sans-serif;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.contact {
+    background-color: var(--Grey-800);
+    padding: 40px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 384px;
+}
+
+img {
+    border-radius: 50%;
+    width: 88px;
+    height: 88px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    color: var(--White);
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+h2 {
+    color: var(--Green);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 25px 0;
+}
+
+p {
+    color: var(--White);
+    font-size: var(--font-size);
+    font-weight: 400;
+    margin: 0 0 25px 0;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.btn {
+    display: block;
+    background-color: var(--Grey-700);
+    color: var(--White);
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: var(--font-size);
+    width: 100%;    
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--Green);
+    color: var(--Grey-900);
+}
+
+.attribution { 
+    font-size: 12px; 
+    font-weight: 400;
+    text-align: center; 
+    color: var(--White);
+    margin-top: 40px;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.attribution a { 
+    color: var(--Green);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.attribution a:hover {
+    color: var(--White);
+    text-decoration: underline;
+}
