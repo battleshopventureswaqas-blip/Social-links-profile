@@ -4,7 +4,7 @@
     --Grey-700: hsl(0, 0%, 20%);
     --Grey-800: hsl(0, 0%, 12%);
     --Grey-900: hsl(0, 0%, 8%);
-    --font-size: 0.875rem; 
+    --font-size: clamp(0.875rem, 2.5vw, 1rem); 
 }
 
 *, *::before, *::after {
@@ -49,7 +49,6 @@ h1 {
     font-size: clamp(1.25rem, 5vw, 1.5rem); 
     font-weight: 700;
     margin-block-start: 0;
-    /* Updated to clamp */
     margin-block-end: clamp(0.5rem, 2vw, 0.625rem); 
 }
 
@@ -72,7 +71,6 @@ p {
 .links {
     display: flex;
     flex-direction: column;
-    /* Updated gap to clamp */
     gap: clamp(0.75rem, 3vw, 0.9375rem); 
     inline-size: 100%;
 }
@@ -82,7 +80,6 @@ p {
     background-color: var(--Grey-700);
     color: var(--White);
     text-decoration: none;
-    /* Updated padding to clamp */
     padding: clamp(0.75rem, 3vw, 0.9375rem); 
     border-radius: 0.5rem;
     font-weight: 600;
@@ -97,11 +94,10 @@ p {
 }
 
 .attribution { 
-    font-size: 0.75rem; 
+    font-size: clamp(0.65rem, 2vw, 0.75rem); 
     font-weight: 400;
     text-align: center; 
     color: var(--White);
-    /* Updated margin and padding to clamp */
     margin-block-start: clamp(1.5rem, 5vw, 2.5rem);
     inline-size: 100%;
     padding-block-end: clamp(1rem, 3vw, 1.25rem);
