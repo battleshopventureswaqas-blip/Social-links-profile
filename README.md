@@ -88,7 +88,7 @@ Outcome: Streamlined the debugging process and reinforced best practices for sem
 
 Name - Muhammad Waqas Siddique
 
-Frontend Mentor - @battleshopventureswaqas-blip
+Frontend Mentor -(https://www.frontendmentor.io/profile/battleshopventureswaqas-blip)
 
-GitHub - https://github.com/battleshopventureswaqas-blip
+GitHub - (https://github.com/battleshopventureswaqas-blip)
 
