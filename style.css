@@ -4,7 +4,7 @@
     --Grey-700: hsl(0, 0%, 20%);
     --Grey-800: hsl(0, 0%, 12%);
     --Grey-900: hsl(0, 0%, 8%);
-    --font-size: 14px;
+    --font-size: 0.875rem; /* 14px converted to rem (14/16) */
 }
 
 /* Universal Box Sizing */
@@ -19,56 +19,59 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-block-size: 100vh; /* Logical property for min-height */
     margin: 0;
-    padding: 20px;
+    padding: 1.25rem; /* 20px -> rem */
 }
 
 .contact {
     background-color: var(--Grey-800);
-    padding: 40px;
-    border-radius: 15px;
+    padding: 2.5rem; /* 40px -> rem */
+    border-radius: 0.9375rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 100%;
-    max-width: 384px;
+    /* CSS function min() for responsive width */
+    inline-size: min(100%, 24rem); /* Logical property for width/max-width */
 }
 
 img {
     border-radius: 50%;
-    width: 88px;
-    height: 88px;
-    margin-bottom: 25px;
+    inline-size: 5.5rem; /* Logical property for width */
+    block-size: 5.5rem; /* Logical property for height */
+    margin-block-end: 1.5625rem; /* Logical property for margin-bottom */
 }
 
 h1 {
     color: var(--White);
-    font-size: 24px;
+    font-size: 1.5rem; /* 24px -> rem */
     font-weight: 700;
-    margin: 0 0 10px 0;
+    margin-block-start: 0;
+    margin-block-end: 0.625rem; /* 10px -> rem */
 }
 
 h2 {
     color: var(--Green);
-    font-size: 14px;
+    font-size: var(--font-size);
     font-weight: 600;
-    margin: 0 0 25px 0;
+    margin-block-start: 0;
+    margin-block-end: 1.5625rem; /* 25px -> rem */
 }
 
 p {
     color: var(--White);
     font-size: var(--font-size);
     font-weight: 400;
-    margin: 0 0 25px 0;
+    margin-block-start: 0;
+    margin-block-end: 1.5625rem;
 }
 
 .links {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    width: 100%;
+    gap: 0.9375rem; /* 15px -> rem */
+    inline-size: 100%;
 }
 
 .btn {
@@ -76,11 +79,11 @@ p {
     background-color: var(--Grey-700);
     color: var(--White);
     text-decoration: none;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 0.9375rem;
+    border-radius: 0.5rem;
     font-weight: 600;
     font-size: var(--font-size);
-    width: 100%;    
+    inline-size: 100%;    
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -90,13 +93,13 @@ p {
 }
 
 .attribution { 
-    font-size: 12px; 
+    font-size: 0.75rem; /* 12px -> rem */
     font-weight: 400;
     text-align: center; 
     color: var(--White);
-    margin-top: 40px;
-    width: 100%;
-    padding-bottom: 20px;
+    margin-block-start: 2.5rem;
+    inline-size: 100%;
+    padding-block-end: 1.25rem;
 }
 
 .attribution a { 
@@ -109,4 +112,16 @@ p {
 .attribution a:hover {
     color: var(--White);
     text-decoration: underline;
+}
+
+/* Accessibility: Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
